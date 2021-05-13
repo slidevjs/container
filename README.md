@@ -58,3 +58,7 @@ $ docker build -t <tag> .
 
 > The tag syntax is as follows `username`/`image_name`:`version`  
 > *`username` is mandatory only if you want to push to remote registry*
+
+### LICENSE
+
+This repository is licensed under the MIT license
