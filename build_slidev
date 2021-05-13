@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -eux
+
+key="$1"
+
+podman login docker.io --username stig124 --password "$(secrets.sh get docker)"
+
+tag="stig124/slidev:"
+tag+="$key"
+
+pushd /home/stig124/docker/dockerbuild/slidev/slidevc || exit
+
+podman build --no-cache -t "$tag" .
+docker_tag1="docker.io/"
+docker_tag1+="$tag"
+docker_tag2="docker.io/stig124/slidev:latest"
+podman tag "$tag" "$docker_tag1"
+podman tag "$tag" "$docker_tag2"
+podman push "$docker_tag1"
+podman push "$docker_tag2"
+
+
