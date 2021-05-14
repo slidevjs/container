@@ -35,7 +35,7 @@ $ podman pull docker.io/stig124/slidev:latest
 Go into a directory with a `slides.md` file and run it :
 
 ```bash
-$ docker run --rm -v .:/root/slides -p 3000:3030 stig124/slidev:latest
+$ docker run --rm -v .:/root/slides -p 3030:3030 stig124/slidev:latest
 ```
 
 **WARNING** : Please note that if you have a `node_modules` folder within the folder with the `slides.md` file, It will be **deleted** (You can add `-e KEEP=1` next to `--rm` in the command to revert this behaviour) as it may blocks the starting of the container
@@ -44,7 +44,7 @@ $ docker run --rm -v .:/root/slides -p 3000:3030 stig124/slidev:latest
 You can :
 
 - Run it in the backgroud by adding `-d`
-- Change the default port by replacing the `3000` in the port declaration
+- Change the default port by replacing the left part of the port declaration
 
 ### Build
 
@@ -58,3 +58,7 @@ $ docker build -t <tag> .
 
 > The tag syntax is as follows `username`/`image_name`:`version`  
 > *`username` is mandatory only if you want to push to remote registry*
+
+### LICENSE
+
+This repository is licensed under the MIT license
