@@ -25,9 +25,11 @@ def getactualimage():
     with curl.get(url) as r:
         if r.status_code == 200:
             j = r.json()
-    image = str(j['results'][0]['name'])
-    image = image.replace(".", "").lstrip('0')
-    return image
+    for i in range(10):
+        image = str(j['results'][i]['name'])
+        if image != 'latest' and '-buster' not in image:
+            image = image.replace(".", "").lstrip('0')
+            return image
 
 
 def checknpm():

@@ -35,7 +35,7 @@ $ podman pull docker.io/stig124/slidev:latest
 Go into a directory with a `slides.md` file and run it :
 
 ```bash
-$ docker run --rm -v .:/root/slides -p 3030:3030 stig124/slidev:latest
+$ docker run --rm -v "$PWD":/root/slides -p 3030:3030 stig124/slidev:latest
 ```
 
 **WARNING** : Please note that if you have a `node_modules` folder within the folder with the `slides.md` file, It will be **deleted** (You can add `-e KEEP=1` next to `--rm` in the command to revert this behaviour) as it may blocks the starting of the container
