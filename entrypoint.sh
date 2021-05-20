@@ -1,5 +1,7 @@
 #!/bin/sh
 
+
+which slidev || exit > /dev/null
 if [ -z "${KEEP}" ]; then
     rm -rf /root/slides/node_modules
 else
@@ -7,7 +9,7 @@ else
     echo "If it doesn't start or/and prints an error message, delete or move the node_modules folder"
 fi
 if [ -f /root/slides/slides.md ]; then
-    npx slidev --remote
+    pnpx slidev --remote
 else
     echo "slides.md not found in the bind mount to /root/slides"
     echo "Please check the presence of that file"
