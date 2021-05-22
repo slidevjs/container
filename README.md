@@ -1,5 +1,9 @@
 # Slidev Container
 
+## NOTE :
+
+Due to many reasons out of my reach, I can't continue maintaining this repo, very sorry about that
+
 ## Table of Contents
 
 - [About](#about)
