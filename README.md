@@ -1,5 +1,5 @@
 # Slidev Container
-
+![ver](https://shields.io/docker/v/stig124/slidev?arch=amd64&sort=semver) ![imgs](https://shields.io/docker/pulls/stig124/slidev)
 ## Table of Contents
 
 - [About](#about)
@@ -20,7 +20,7 @@ This is the repository for the source of the Docker image for [slidev](https://g
 
 Just have `docker` (or `podman`) installed
 
-### Running
+### Usage
 
 Pull the image :
 
